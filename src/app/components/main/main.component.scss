@@ -1,0 +1,86 @@
+.users {
+  .container {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 40px 0 60px;
+    .users-title {
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .search{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 40px;
+
+        input{
+            width: 300px;
+            outline: none;
+            border: gray solid 1px;
+            border-radius: 5px;
+            height: 30px;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .btn{
+            width: 100px;
+            background-color: rgb(194, 236, 222);
+            border: none;
+            border-radius: 5px;
+            height: 30px;
+            cursor: pointer;
+        }
+    }
+
+    .filter{
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: end;
+
+        select{
+            width: 100px;
+            padding: 5px;
+            
+
+        }
+    }
+
+    .users-list {
+
+      .user {
+        padding: 20px;
+
+        .user-container{
+        display: flex;
+        
+            .user-name {
+            min-width: 200px;
+            font-size: 24px;
+            }
+
+            .user-status {
+            font-size: 24px;
+            }
+
+            .online {
+            color: green;
+            }
+            .offline {
+            color: red;
+            }
+
+            .user-email{
+               font-size: 24px;
+               margin-left: 50px; 
+            }
+        }
+      }
+
+      .user:nth-child(odd){
+        background-color: rgb(194, 236, 222);
+      }
+    }
+  }
+}

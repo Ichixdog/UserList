@@ -1,0 +1,25 @@
+<section class="users">
+    <div class="container">
+        <div class="users-title">Список пользователей</div>
+        <div class="search">
+            <input type="text" [(ngModel)]="searchText">
+            <button class="btn" (click)="searchByName(searchText)">Найти</button>
+        </div>
+        <div class="filter">
+            <select (change)="searchByStatus($event)">
+                <option value="">Фильтр</option>
+                <option value="Online">Online</option>
+                <option value="Offline">Offline</option>
+            </select>
+        </div>
+        <div class="users-list">
+            <div class="user" *ngFor="let user of filteredUsers">
+                <div class="user-container" (mouseenter)="user.isHovered = true" (mouseleave)="user.isHovered = false">
+                    <div class="user-name">{{user.name}}</div>
+                    <div class="user-status" [ngClass]="user.active === 'Online' ? 'online' : 'offline'">{{user.active}}</div>
+                    <div class="user-email"  *ngIf="user.isHovered">{{user.email}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
